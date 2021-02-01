@@ -5,9 +5,56 @@
 <link rel="shortcut icon" href="Work_icon.ico">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<media (min-width: 768px)
-</head>
+<media (min-width: 768px)>
 <style>
+  /* Valikko nappulan muokkaus*/
+.nappi {
+  background-color: darkgreen;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* sisällön sijainti */
+.valikko {
+  position: relative;
+  display: inline-block;
+}
+
+/* valikon sisällön ulkonäkö */
+.nappisisalto {
+  display: none;
+  list-style-type: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Valikon sisällä olevat linkit */
+.nappisisalto a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: lightgreen;
+}
+
+/* Kun hoveraa linkkiä minkä väriseksi vaihtuu */
+.nappisisalto a:hover {background-color: darkgreen}
+
+/* Näyttää valikon kun hoveraa */
+.valikko:hover .nappisisalto {
+  display: block;
+}
+
+/* Valikko nappulan taustan värin vaiho, kun hoverataan valikkoa */
+.valikko:hover .nappi {
+  background-color: #3e8e41;
+}
   body {
       background-color: lightblue;
     font-family: serif;
@@ -50,6 +97,16 @@
  
   </style>
 <body>
+  <div class="valikko">
+    <button class="nappi">Valikko</button>
+    <div class="nappisisalto">
+        <li><a class="active" href="HTML.html">Etusivu</a></li>
+        <li><a href="Hae_toihin.html">Hae töihin!</a></li>
+        <li><a href="NUORI.html">Nuorille!</a></li>
+        <li><a href="VANHEMPI.html">Aikuisille!</a></li>
+        <li class="right"><a href="message.html">Meistä</a></li>
+    </div>
+</div>
 <h1>Avainpolku Oy</h1>
 
 <h3>VANHEMMALLE</h3>
