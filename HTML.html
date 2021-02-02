@@ -6,7 +6,7 @@
         <title>Avainpolku Oy</title>
         <link rel="shortcut icon" href="Work_icon.ico">
         <style>
-/* Valikko nappulan muokkaus*/
+            /* Valikko nappulan muokkaus*/
 .nappi {
   background-color: darkgreen;
   color: black;
@@ -61,21 +61,23 @@
 
         h1 {
            text-align: center;
-           font-family: serif;
+           font-family: 'Times New Roman', serif;
            font-weight: bold;
            text-transform: uppercase;
            border-bottom: 1px solid #57b1dc;
            margin-top: 30px;
+           color: rgb(0, 0, 0);
+    text-shadow: .05em .05em .1em lightslategray;
        }
     
        p {
-        font-family: serif;
+        font-family: Georgia, serif;
         font-weight: normal;
         text-align: center;
        }
 
         h2 {text-align: center;
-           font-family: serif;
+           font-family: cursive;
            font-weight: bold;
            text-transform: uppercase;
            border-bottom: 1px solid #57b1dc;
@@ -87,23 +89,34 @@
         }
 
         h4 {text-align: center;
-           font-family: serif;
+           font-family: cursive;
            font-weight: bold;
            text-transform: uppercase;
            border-bottom: 1px solid #57b1dc;
            margin-top: 30px;
            }
 
-        p1 {text-align: center;}  
+      
+
         .dark-mode {
             background-color: black;
             color: white;    
+
         }
+ @media screen and (min-width: 600px) {
+    nav ul li {
+      flex: none;
+    }
+    img {
+    max-width: 25%;
+    }
+
+    
         </style>
     </head>
     
     <body>
-     <div class="valikko">
+        <div class="valikko">
         <button class="nappi">Valikko</button>
         <div class="nappisisalto">
             <li><a class="active" href="HTML.html">Etusivu</a></li>
@@ -112,16 +125,18 @@
             <li><a href="VANHEMPI.html">Aikuisille!</a></li>
             <li class="right"><a href="message.html">Meistä</a></li>
         </div>
-    </div>
-    <script>
-        function myFunction() {
-           var element = document.body;
-           element.classList.toggle("dark-mode");
-        }
-        </script>
-        <button onclick="myFunction()">Toggle dark mode</button>
-<div style:"padding:0 16px;">
-    <h1>Tämä on Avainpolku Oy</h1>
+        <script>
+            function myFunction() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
+            </script>
+
+    <button onclick="myFunction()">Toggle dark mode</button>
+
+    
+    <h1>Tämä on Avainpolku Oy <br></br><img img width="300" height="200" class="width-100" src="LOGO" alt="logo" class="responsive" width="400" height="200"></h1>
+   
     
     <p>All rights reserved to their respected owners of Avainpolku Oy and Liven't</p>
 
@@ -137,7 +152,7 @@
     <p>Avainpolku Oy myös tarjoaa muillekkin ikäluokille työtä. Tämä kuitenkin on vähän vähemmän tuettu, kuin nuorten, koska haluamme toimia nuorten avaimena työelämään.</p>
 
     <nav id="footer-nav">
-        <p>Täältä voit hakea <a href=Hae_toihin.html>töihin!</a></p>
+        <p>Täältä voit hakea <a href=Hae_töihin!!.html>töihin!</a></p>
     </nav>
     
 
@@ -146,7 +161,7 @@
     <nav id="footer-nav">
         <p>Täältä saat <a href=apua.html>apua</a></p>
     </nav>
-</div>
+    
 
     
 
